@@ -9,5 +9,5 @@ def my_Hng_api(request):
     return Response({
         "slack_email": "stepabod@yahoo.com",
         "current_datetime": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
-        "github_url": "https://github.com/yourusername/yourrepository"
+        "github_url": "https://github.com/Donchess1/Myproject.git"
     }, status=status.HTTP_200_OK)
