@@ -23,11 +23,11 @@ python manage.py migrate
 
 #=== Run the Development Server==#
 python manage.py runserver
-and access api at http://127.0.0.1:8000/info
+and access api at http://127.0.0.1:8000/
 
 #=== Expected Result==#
 {
     "slack_email": "stepabod@yahoo.com",
     "current_datetime": "2025-01-29T12:34:56.789Z",
-    "github_url": "https://github.com/yourusername/yourrepository"
+    "github_url": "https://github.com/Donchess1/Myproject.git"
 }

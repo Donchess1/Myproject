@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import my_HNG_api
+from .views import my_Hng_api
 
 urlpatterns = [
-    path("info/", my_HNG_api, name="HNG_api"),
+    path("", my_Hng_api, name="HNG_api"),
 ]
