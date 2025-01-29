@@ -25,9 +25,22 @@ python manage.py migrate
 python manage.py runserver
 and access api at http://127.0.0.1:8000/
 
-#=== Expected Result==#
+==>Endpoint URL:
+ GET /api/
+
+==> Request Format:
+Method: GET
+Headers:
+Content-Type: application/json
+Body: No body required for this request.
+
+==> Response Format:
+Content-Type: application/json
+==> Response Body
 {
     "slack_email": "stepabod@yahoo.com",
     "current_datetime": "2025-01-29T12:34:56.789Z",
     "github_url": "https://github.com/Donchess1/Myproject.git"
 }
+==> Request Example
+curl -X GET http://127.0.0.1:8000/api/
