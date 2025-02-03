@@ -10,7 +10,7 @@ def classify_number(request):
     try:
         number = int(number)
     except (TypeError, ValueError):
-       return JsonResponse({"number": number, "error": True }, status=400)
+       return JsonResponse({"number": "alphabet", "error": True }, status=400)
     return JsonResponse(
             {"number": number,
              "is_prime": False if number < 2 else all(number % i !=0 for i in range(2, int(sqrt(number)) + 1)),
@@ -18,4 +18,3 @@ def classify_number(request):
              "properties": [get_properties(number)],
              "digit_sum": sum(int(digit) for digit in str(number)),
              "fun_fact": get_fun_fact(number)})
-

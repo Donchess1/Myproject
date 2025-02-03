@@ -8,12 +8,13 @@ This is a basic DRF api, built to accept a "number", and return the following in
 4. "properties": ["armstrong", "odd"],
 5. "digit_sum": 11,  // sum of its digits
 6. "fun_fact": "371 is an Armstrong number because 3^3 + 7^3 + 1^3 = 371" //gotten from the numbers API
+
 if not a valid number, it returns:
 1. "number": "alphabet",
 2. "error": true
 
 Features
-Simple GET request to <your-domain.com>/api/classify-number?number=
+Simple GET request to https://hng-api-nlso.onrender.com/api/classify-number?number=
 Returns JSON-formatted response
 Uses Django REST Framework
 
@@ -29,24 +30,27 @@ python manage.py migrate
 
 #=== Run the Development Server==#
 python manage.py runserver
-and access api at http://127.0.0.1:8000/
+and access api at http://127.0.0.1:8000/api/classify-number?number=
 
 ==>Endpoint URL:
- GET /api/
+ GET https://hng-api-nlso.onrender.com/api/classify-number?number=371
 
 ==> Request Format:
 Method: GET
 Headers:
 Content-Type: application/json
-Body: No body required for this request.
+params: "number"
 
 ==> Response Format:
 Content-Type: application/json
 ==> Response Body
 {
-    "slack_email": "stepabod@yahoo.com",
-    "current_datetime": "2025-01-29T12:34:56.789Z",
-    "github_url": "https://github.com/Donchess1/Myproject.git"
+    "number": "number",
+    "is_prime": false,
+    "is_perfect": false,
+    "properties": ["armstrong", "odd"],
+    "digit_sum": 11,  // sum of its digits
+    "fun_fact": "371 is an Armstrong number because 3^3 + 7^3 + 1^3 = 371" //gotten from the numbers API
 }
 ==> Request Example
 curl -X GET http://127.0.0.1:8000/api/classify-number?number=number
