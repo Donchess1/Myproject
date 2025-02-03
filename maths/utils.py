@@ -1,10 +1,14 @@
 import requests
 def is_armstrong(number):
-    num_str = str(number)
-    return sum(int(digit) ** len(num_str) for digit in num_str) == number
+    num_str = str(abs(number))
+    armstrong_sum = sum(int(digit) ** len(num_str) for digit in num_str) == number
+    return armstrong_sum == abs(number)
 
 def is_odd(number):
     return number % 2 != 0
+def digit_sum(number):
+    abs_sum = sum(int(digit) for digit in str(abs(number)))
+    return -abs_sum if number < 0 else abs_sum
 
 def get_properties(number):
     return ("armstrong, odd" if is_armstrong(number) and is_odd(number) else
