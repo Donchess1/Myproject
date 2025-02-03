@@ -3,4 +3,5 @@ from .views import classify_number
 
 urlpatterns = [
     path("api/classify-number/", classify_number, name="my_maths"),
+    path("api/classify-number/", classify_number, name="my_maths"),
 ]
